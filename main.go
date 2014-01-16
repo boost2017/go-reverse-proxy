@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	"strings"
 
 	"github.com/codegangsta/martini"
 )
@@ -36,13 +37,22 @@ func main() {
 	// Martini
 	m := martini.Classic()
 	for _, route := range config.Routes {
-		switch route.Verb {
+		switch strings.ToLower(route.Verb) {
 		case "get":
 			fmt.Printf("Mapping GET %v to %v\n", route.Source, route.Destination)
 			m.Get(route.Source, handler(route.Destination))
+		case "patch":
+			fmt.Printf("Mapping PATCH %v to %v\n", route.Source, route.Destination)
+			m.Patch(route.Source, handler(route.Destination))
 		case "post":
 			fmt.Printf("Mapping POST %v to %v\n", route.Source, route.Destination)
 			m.Post(route.Source, handler(route.Destination))
+		case "put":
+			fmt.Printf("Mapping PUT %v to %v\n", route.Source, route.Destination)
+			m.Put(route.Source, handler(route.Destination))
+		case "delete":
+			fmt.Printf("Mapping DELETE %v to %v\n", route.Source, route.Destination)
+			m.Delete(route.Source, handler(route.Destination))
 		}
 	}
 	m.Run()
