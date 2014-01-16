@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/zhubert/go-reverse-proxy",
+	"GoVersion": "go1.2",
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Rev": "37512bbe41b4cc579cdd706742efc7bf34f94b06"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/martini",
+			"Comment": "v0.1-11-g152f435",
+			"Rev": "152f435dd4f0cd8c33c4f3b4e087dab3d3e0b274"
+		}
+	]
+}

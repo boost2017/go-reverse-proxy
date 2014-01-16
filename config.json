@@ -1,0 +1,15 @@
+{
+  "Routes":
+    [
+      {
+        "Verb": "get",
+        "Source": "/topics",
+        "Destination": "http://localhost:3000"
+      },
+      {
+        "Verb": "get",
+        "Source": "/",
+        "Destination": "http://localhost:3001"
+      }
+    ]
+}
