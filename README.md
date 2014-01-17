@@ -5,7 +5,7 @@ Let's say you have an existing service that you want to peel off some endpoints 
 
 That's what this is for.
 
-## Example: Rails App, Add Go Service
+### Example: Rails App, Add Go Service
 
 So we've got a Rails app on port 3000 and a Go service we want to introduce into the mix on port 2112.
 
@@ -38,6 +38,6 @@ rush: PORT=2112 rush-server
 ```
 
 
-## Acknowledgements
+### Acknowledgements
 
-Uses Martini to make a super fast reverse proxy, thanks Jeremy!
+Uses [Martini](https://github.com/codegangsta/martini) to make a super fast reverse proxy, thanks Jeremy!
