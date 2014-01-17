@@ -37,6 +37,9 @@ web: bundle exec rails server -p 3001
 rush: PORT=2112 rush-server
 ```
 
+### Proof of Concept
+
+Just something [@danott](http://www.github.com/danott) and I were thinking about.
 
 ### Acknowledgements
 
