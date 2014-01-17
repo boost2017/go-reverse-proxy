@@ -29,6 +29,14 @@ Spin up go-reverse-proxy on port 3000, change the Rails app to port 3001, and ha
 }
 ```
 
+And then in your Procfile:
+
+```
+proxy: PORT=3000 go-reverse-proxy
+web: bundle exec rails server -p 3001
+rush: PORT=2112 rush-server
+```
+
 
 ## Acknowledgements
 
