@@ -37,6 +37,8 @@ web: bundle exec rails server -p 3001
 rush: PORT=2112 rush-server
 ```
 
+Now when a request comes in for ```http://localhost:3000/rush_endpoint``` it will be seemlessly proxied to ```http://localhost:2112/rush_endpoint```, all other requests will be proxied to ```http://localhost:3001```
+
 ### Proof of Concept
 
 Just something [@danott](http://www.github.com/danott) and I were thinking about.
